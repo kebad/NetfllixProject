@@ -1,0 +1,65 @@
+
+/* 1. የ Row ክፍል ዋና መያዣ */
+.row {
+  color: white;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+/* 2. የካቴጎሪው ርዕስ (Title) */
+.row h1,
+.row h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  padding-left: 5px;
+}
+
+/* 3. የፊልም ፖስተሮች አግድም መደደሪያ (Row Posters Container) */
+.row_posters {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px 0 20px 5px;
+  gap: 10px; /* በፖስተሮቹ መካከል ያለው ርቀት */
+  scroll-behavior: smooth;
+}
+
+/* 4. አግድሙን Scrollbar የሚደብቅ (ለ Chrome, Safari እና Opera) */
+.row_posters::-webkit-scrollbar {
+  display: none;
+}
+
+/* 5. አግድሙን Scrollbar የሚደብቅ (ለ Firefox እና IE/Edge) */
+.row_posters {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* 6. የመደበኛ ፊልም ፖስተሮች Styling (Backdrop images) */
+.row_poster {
+  object-fit: contain;
+  width: 100%;
+  max-height: 120px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 450ms ease-in-out, opacity 450ms;
+}
+
+/* 7. ፖስተሩ ላይ Hover ሲደረግ የሚፈጠር የ Zoom Effect */
+.row_poster:hover {
+  transform: scale(1.08);
+  opacity: 1;
+}
+
+/* 8. የ Netflix Originals ትልልቅ ፖስተሮች Styling (isLarge ሲሆን) */
+.row_posterLarge {
+  max-height: 250px;
+}
+
+.row_posterLarge:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+
