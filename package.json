@@ -1,10 +1,13 @@
 {
+  "homepage": "https://kebad.github.io/NetfllixProject",
   "name": "-latest",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "predeploye": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "vite build",
     "lint": "oxlint",
     "preview": "vite preview"
@@ -24,6 +27,8 @@
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.4",
+    "gh-pages": "^6.3.0",
+    "github-pages": "^3.0.2",
     "oxlint": "^1.75.0",
     "vite": "^8.2.0"
   }
